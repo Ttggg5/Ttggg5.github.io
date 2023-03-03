@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="P-HhB58uMF3SSx0WK0vhy7ZyonMH93GqwSAYHhM_S1g" />
+    <meta charset="UTF-8">
+    <title>Hololive production</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="padding-left: 20px; padding-top: 10px; padding-bottom: 10px; box-shadow: 0px 3px 0px 0px black">
+        <img src="./resource/hololive_logo.webp">
+    </div>
+
+
+    <div id="content">
+        <div id="backgroundImgBlock">
+            <img src="./resource/background.jpg">
+            <h1 id="mainText">
+                <strong>
+                    Oops! Looks like there is something wrong here
+                </strong>
+            </h1>
+        </div>
+
+        <div id="blueBlock">
+            <div style="position: absolute;
+                 top: 80%; left: 88%;
+                 transform: translate(-50%, -50%);">
+                <img id="gura" src="./resource/Gawr_Gura.png" style="min-width: 80px; max-width: 200px">
+            </div>
+
+            <div id="loadingCircle"
+                 style="position: absolute;
+                 top: 10px; right: 5px;"></div>
+
+            <img id="soraGif"
+                 src="./resource/sora.gif"
+                 style="position: absolute;
+                 max-width: 420px; min-width: 200px;
+                 top: 50%; left: 30%;
+                 border-radius: 10px;
+                 transform: translate(-50%, -50%);
+                 box-shadow: 3px 3px 3px 3px dimgray">
+
+            <div style="position: absolute; top: 50%; left: 70%; transform: translate(-50%, -50%);">
+                <div style="color: white; font-size: 150%; display: inline">
+                    You can press <div style="color: yellow; display: inline;">"F5"</div> if waiting for too long.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottomBlock" style="display: inline-block; width: 100%">
+        <div>
+            <img src="./resource/hololive_cover.webp" width="250px">
+        </div>
+
+        <div style="position: relative; float: right; bottom: 50px; right: 15px;">
+            <img id="youtubeIcon" src="./resource/YouTube_icon.png"
+                 style="width: 50px; height: 33px;"
+                 onclick="gotoYoutube()">
+        </div>
+        <div style="position: relative; float: right; bottom: 53px; right: 40px;">
+            <img id="twitterIcon" src="./resource/Twitter-icon.png"
+                 style="width: 50px; height: 40px;"
+                 onclick="gotoTwitter()">
+        </div>
+        <div style="position: relative; float: right; bottom: 60px; right: 70px;">
+            <img id="facebookIcon" src="./resource/Facebook_icon.webp"
+                 style="width: 50px; height: 50px;"
+                 onclick="gotoFacebook()">
+        </div>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
