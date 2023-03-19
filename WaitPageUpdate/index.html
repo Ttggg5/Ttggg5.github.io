@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="P-HhB58uMF3SSx0WK0vhy7ZyonMH93GqwSAYHhM_S1g" />
+    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <title>Hololive production</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="padding: 10px 20px 10px 20px; box-shadow: 0px 3px 0px 0px black;">
+        <h1 style="padding-left: 65px;color: #77d0df; font-size: xxx-large; font-family: 微軟正黑體;">
+            <img alt=""
+                 src="./resource/a_chan.webp"
+                 style="position: absolute;
+                 height: 100px;
+                 padding-top: 6px;
+                 left: 20px;
+                 z-index: 0;">Hololive
+            <strong style="font-family: 微軟正黑體;
+                font-size: medium;
+                position: absolute;
+                left: 130px; top: 92px;
+                color: gray;
+                font-weight: 900;">Not Official</strong>
+        </h1>
+    </div>
+
+
+    <div id="content">
+        <div id="backgroundImgBlock">
+            <img alt="" src="./resource/background.webp">
+            <h1 id="mainText">
+                <strong>
+                    Oops! Looks like there is something wrong here
+                </strong>
+            </h1>
+        </div>
+
+        <div id="blueBlock">
+            <div style="position: absolute;
+                 top: 80%; left: 88%;
+                 transform: translate(-50%, -50%);">
+                <img id="gura"
+                     alt=""
+                     src="./resource/Gawr_Gura.webp"
+                     style="min-width: 80px; max-width: 200px;>
+            </div>
+
+            <div id="loadingCircle"
+                 style="position: absolute;
+                 top: 10px; right: 5px;"></div>
+
+            <video id="soraGif" loop autoplay
+                   style="position: absolute;
+                   max-width: 420px; min-width: 200px;
+                   top: 50%; left: 30%;
+                   border-radius: 10px;
+                   transform: translate(-50%, -50%);
+                   box-shadow: 3px 3px 3px 3px dimgray">
+                <source src="./resource/sora.mp4" type="video/mp4">
+            </video>
+
+
+            <div style="position: absolute; top: 50%; left: 68%; transform: translate(-50%, -50%);">
+                <div style="color: white; font-size: 150%; display: inline">
+                    You can press <div style="color: yellow; display: inline;">"F5"</div> if waiting for too long.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottomBlock" style="display: inline-block; width: 100%">
+        <div style="position: relative; float: right; top: 10px; right: 115px;">
+            <img id="youtubeIcon" alt="official youtube" src="./resource/YouTube_icon.webp"
+                 style="width: 50px; height: 33px;"
+                 onclick="gotoYoutube()">
+        </div>
+        <div style="position: relative; float: right; top: 6px; right: 140px;">
+            <img id="twitterIcon" alt="official twitter" src="./resource/Twitter-icon.webp"
+                 style="width: 50px; height: 40px;"
+                 onclick="gotoTwitter()">
+        </div>
+        <div style="position: relative; float: right; top: -4px; right:170px;">
+            <img id="facebookIcon" alt="official facebook" src="./resource/Facebook_icon.webp"
+                 style="width: 50px; height: 50px;"
+                 onclick="gotoFacebook()">
+        </div>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
