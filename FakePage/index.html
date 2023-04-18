@@ -3,12 +3,37 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>會員登入頁 - 巴哈姆特</title>
 </head>
 <body>
-    <div class="top-bh">
-        <img src="resource/top_logo.svg" height="35px">
+    <div class="top-info">
+        <a href="https://www.gamer.com.tw/">
+            <img src="resource/top_logo.svg" height="35px">
+        </a>
+    </div>
 
+    <div class="login-block">
+        <div class="header-img">
+            <img src="resource/baha_logo_horizontal.svg" width="190px">
+        </div>
+
+        <form id="form-login" method="get">
+            <input type="text" class="input-form-login" placeholder="帳號">
+            <div class="password-block">
+                <input type="password" class="input-form-login" id="input_password" placeholder="密碼">
+                <i class="far fa-eye" id="togglePassword"></i>
+
+            </div>
+
+        </form>
+    </div>
+
+    <div class="bottom-info">
+        <p>本站所刊載之圖文內容等版權皆屬原廠商或原作者所有，非經同意請勿轉載<br>
+            巴 哈 姆 特 電 玩 資 訊 站 https://www.gamer.com.tw
+        </p>
     </div>
 </body>
+<script src="main.js"></script>
 </html>
