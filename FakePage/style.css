@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #E5E5E5;
+}
+
+.top-bh{
+    height: 35px;
+    background: linear-gradient(135deg, #13aeab 0%, #117e96 75%);
+}
