@@ -18,15 +18,38 @@
             <img src="resource/baha_logo_horizontal.svg" width="190px">
         </div>
 
-        <form id="form-login" method="get">
+        <form id="form-login" method="post">
             <input type="text" class="input-form-login" placeholder="帳號">
             <div class="password-block">
                 <input type="password" class="input-form-login" id="input_password" placeholder="密碼">
                 <i class="far fa-eye" id="togglePassword"></i>
-
             </div>
 
+            <div style="display: flex; align-items: center; width: 100%; height: 20px; margin-top: 8px">
+                <div class="check-group">
+                    <input type="checkbox" id="check-saveid">
+                    <label for="check-saveid">
+                        <h6>記住帳號</h6>
+                    </label>
+                </div>
+
+                <div class="check-group" style="margin-left: 10px">
+                    <input type="checkbox" id="check-active">
+                    <label for="check-saveid">
+                        <h6>保持登入狀態</h6>
+                    </label>
+                </div>
+
+                <a class="caption-text" href="https://user.gamer.com.tw/login_problem.php" style="margin-left: auto;">登入有問題嗎？</a>
+            </div>
+
+            <a class="btn-login">登入</a>
         </form>
+
+        <div style="font-size: 13px; color: rgba(76, 87, 102, 0.6); margin-top: 15px; display: flex; justify-content: center;">
+            還沒有帳號嗎？
+            <a class="caption-text" href="https://user.gamer.com.tw/register.php">我要註冊</a>
+        </div>
     </div>
 
     <div class="bottom-info">

@@ -4,6 +4,10 @@ body{
     background: #E5E5E5;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
 .top-info{
     height: 35px;
     background: linear-gradient(135deg, #13aeab 0%, #117e96 75%);
@@ -13,7 +17,7 @@ body{
     margin: 8rem auto auto auto;
     background: white;
     border-radius: 4px;
-    width: 360px;
+    width: 312px;
     padding: 36px 24px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
@@ -41,12 +45,48 @@ body{
     margin-top: 17px;
     margin-left: -25px;
     cursor: pointer;
+    display: inline-block;
+    color: #999999;
+}
+
+.check-group input, label{
+    display: inline-block;
+    min-width: 18px;
+    min-height: 16px;
+    cursor: pointer;
+}
+
+.check-group label{
+    margin-left: -5px;
+}
+
+.caption-text {
+    color: #117E96;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.btn-login{
+    background-color: #117e96;
+    color: #FFF;
+    text-decoration: none;
+    display: inline-flex;
+    height: 40px;
+    margin: 20px 0 0 0;
+    width: 100%;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-color: #117e96;
 }
 
 .bottom-info{
-    margin-bottom: 0;
+    bottom: 0;
+    width: 100%;
     border-top: 1px solid #999999;
     height: 80px;
     text-align: center;
     font-size: 12px;
+    position: fixed;
 }
