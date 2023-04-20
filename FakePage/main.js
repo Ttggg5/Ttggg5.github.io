@@ -1,7 +1,15 @@
 let togglePassword = document.getElementById("togglePassword");
 let password = document.getElementById("input_password");
 
-togglePassword.addEventListener('click', function (){
+if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)) {
+    let loginBlock = document.getElementById('loginBox');
+    loginBlock.style.width = '100%';
+    loginBlock.style.height = 'auto';
+    loginBlock.style.marginTop = '0';
+    loginBlock.style.padding = '36px 24px 36px 0px';
+}
+
+togglePassword.addEventListener('click', function() {
     let type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
