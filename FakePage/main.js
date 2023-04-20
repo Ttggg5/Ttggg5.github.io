@@ -5,7 +5,7 @@ let isMobile = false;
 if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)) {
     isMobile = true;
     let loginBlock = document.getElementById('loginBox');
-    IncreaseSize(loginBlock);
+    MobileStyle(loginBlock);
 }
 
 togglePassword.addEventListener('click', function() {
