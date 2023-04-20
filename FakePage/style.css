@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .login-block{
-    margin: 8rem auto auto auto;
+    margin: 8rem auto 300px auto;
     background: white;
     border-radius: 4px;
     width: 312px;
@@ -88,5 +88,4 @@ h1, h2, h3, h4, h5, h6 {
     height: 80px;
     text-align: center;
     font-size: 12px;
-    position: fixed;
 }

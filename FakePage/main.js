@@ -1,12 +1,11 @@
 let togglePassword = document.getElementById("togglePassword");
 let password = document.getElementById("input_password");
+let isMoblie = false;
 
 if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i)) {
+    isMoblie = true;
     let loginBlock = document.getElementById('loginBox');
-    loginBlock.style.width = '100%';
-    loginBlock.style.height = 'auto';
-    loginBlock.style.marginTop = '0';
-    loginBlock.style.padding = '36px 24px 36px 0px';
+    IncreaseSize(loginBlock);
 }
 
 togglePassword.addEventListener('click', function() {
@@ -18,16 +17,22 @@ togglePassword.addEventListener('click', function() {
 window.addEventListener('resize', function() {
     let viewport_width = window.innerWidth;
     let loginBlock = document.getElementById('loginBox');
-    if (viewport_width <= 540){
-        loginBlock.style.width = '100%';
-        loginBlock.style.height = 'auto';
-        loginBlock.style.marginTop = '0';
-        loginBlock.style.padding = '36px 24px 36px 0px';
-    }
-    else{
-        loginBlock.style.width = '312px';
-        loginBlock.style.height = '100%';
-        loginBlock.style.marginTop = '8rem';
-        loginBlock.style.padding = '36px 24px 36px 24px';
-    }
+    if (!isMoblie && viewport_width <= 540)
+        IncreaseSize(loginBlock);
+    else
+        DecreaseSize(loginBlock);
 });
+
+function IncreaseSize(loginBlock){
+    loginBlock.style.width = '100%';
+    loginBlock.style.height = 'auto';
+    loginBlock.style.margin = '0 auto 0 auto';
+    loginBlock.style.padding = '100px 24px 40px 0px';
+}
+
+function  DecreaseSize(loginBlock){
+    loginBlock.style.width = '312px';
+    loginBlock.style.height = '100%';
+    loginBlock.style.marginTop = '8rem auto 300 auto';
+    loginBlock.style.padding = '36px 24px 36px 24px';
+}
