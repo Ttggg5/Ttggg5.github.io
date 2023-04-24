@@ -9,7 +9,7 @@ if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i
     MobileStyle(loginBlock);
 }
 
-togglePassword.addEventListener('click', function (){
+togglePassword.addEventListener('click', function (e){
     let type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
     this.classList.toggle('fa-eye-slash');
