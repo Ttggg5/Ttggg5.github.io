@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <form id="foods" action="http://localhost:3000/api" method="post">
+        <label for="foodName">food name</label>
+        <input type="text" id="foodName" name="foodName">
+        <label for="price">price</label>
+        <input type="text" id="price" name="price">
+        <label for="date">date</label>
+        <input type="text" id="date" name="date">
+        <button type="submit">Submit</button>
+    </form><br>
+    <div id="app">
+        <form>
+            <select id="dateStartYear" name="dateStartYear">
+                <option value="102年">102年</option>
+                <option value="103年">103年</option>
+                <option value="104年">104年</option>
+                <option value="105年">105年</option>
+                <option value="106年">106年</option>
+                <option value="107年">107年</option>
+                <option value="108年">108年</option>
+                <option value="109年">109年</option>
+                <option value="110年">110年</option>
+                <option value="111年">111年</option>
+                <option value="112年">112年</option>
+            </select>
+            <select id="dateStartMonth" name="dateStartMonth">
+                <option value="01月">01月</option>
+                <option value="02月">02月</option>
+                <option value="03月">03月</option>
+                <option value="04月">04月</option>
+                <option value="05月">05月</option>
+                <option value="06月">06月</option>
+                <option value="07月">07月</option>
+                <option value="08月">08月</option>
+                <option value="09月">08月</option>
+                <option value="10月">10月</option>
+                <option value="11月">11月</option>
+                <option value="12月">12月</option>
+            </select>
+
+            <label>至</label>
+            <select id="dateEndYear" name="dateEndYear">
+                <option value="102年">102年</option>
+                <option value="103年">103年</option>
+                <option value="104年">104年</option>
+                <option value="105年">105年</option>
+                <option value="106年">106年</option>
+                <option value="107年">107年</option>
+                <option value="108年">108年</option>
+                <option value="109年">109年</option>
+                <option value="110年">110年</option>
+                <option value="111年">111年</option>
+                <option value="112年">112年</option>
+            </select>
+            <select id="dateEndMonth" name="dateEndMonth">
+                <option value="01月">01月</option>
+                <option value="02月">02月</option>
+                <option value="03月">03月</option>
+                <option value="04月">04月</option>
+                <option value="05月">05月</option>
+                <option value="06月">06月</option>
+                <option value="07月">07月</option>
+                <option value="08月">08月</option>
+                <option value="09月">08月</option>
+                <option value="10月">10月</option>
+                <option value="11月">11月</option>
+                <option value="12月">12月</option>
+            </select>
+        </form>
+
+        <button v-on:click="handleClick">顯示資料</button>
+        <table>
+            <thead>
+            <tr>
+                <th>movie</th>
+                <th>quote</th>
+                <th>character</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="item in data">
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.date }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                data: []
+            };
+        },
+        methods: {
+            async handleClick() {
+                console.log("data");
+
+                let startDate = document.getElementById('dateStartYear').value + document.getElementById('dateStartMonth').value;
+                let endDate = document.getElementById('dateEndYear').value + document.getElementById('dateEndMonth').value;
+                const url = "http://localhost:3000/api?startDate=" + startDate + "&endDate=" + endDate; // 資料傳送到的 URL
+                try {
+                    const response = await fetch(url, {
+                        method: 'GET',
+                    });
+                    const res_data = await response.json();
+                    this.data = res_data ;
+                    console.log("成功", res_data );
+                } catch (error) {
+                    console.log("錯誤", error);
+                }
+            }
+        }
+    });
+
+    app.mount('#app');
+</script>
